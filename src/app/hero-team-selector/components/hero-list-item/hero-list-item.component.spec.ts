@@ -27,11 +27,6 @@ describe('HeroListItemComponent', () => {
   };
   fixture.detectChanges();
 });
-  beforeEach(() => {
-    fixture = TestBed.createComponent(HeroListItemComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
 
   it('should create', () => {
     expect(component).toBeTruthy();
