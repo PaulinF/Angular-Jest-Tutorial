@@ -10,7 +10,7 @@ describe('HeroListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeroListComponent ]
+      declarations: [ HeroListComponent, HeroListItemComponent ]
     })
     .compileComponents();
   }));
