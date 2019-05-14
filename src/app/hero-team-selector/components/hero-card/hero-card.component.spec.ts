@@ -16,6 +16,15 @@ describe('HeroCardComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HeroCardComponent);
     component = fixture.componentInstance;
+    component.member = {
+    id: 3,
+    name: 'IronMan',
+    real_name: 'Anthony Edward "Tony" Stark',
+    thumb:
+      'http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55/standard_xlarge.jpg',
+    image: 'https://i.annihil.us/u/prod/marvel/i/mg/c/60/55b6a28ef24fa.jpg',
+    description: ''
+  };
     fixture.detectChanges();
   });
 
