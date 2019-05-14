@@ -3,12 +3,18 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { TeamSelectorComponent } from './team-selector.component';
 
 describe('TeamSelectorComponent', () => {
-  let component: TeamSelectorComponent;
+  let component: TeamSelectorComponent,
+      HeroListComponent,
+      HeroListItemComponent,
+      TeamComponent,
+      HeroCardComponent,
+      EmptyCardComponent;
   let fixture: ComponentFixture<TeamSelectorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TeamSelectorComponent,
+      declarations: [ 
+      TeamSelectorComponent,
       HeroListComponent,
       HeroListItemComponent,
       TeamComponent,
