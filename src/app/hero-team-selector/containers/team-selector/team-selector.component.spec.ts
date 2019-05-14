@@ -8,7 +8,12 @@ describe('TeamSelectorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TeamSelectorComponent ]
+      declarations: [ TeamSelectorComponent,
+      HeroListComponent,
+      HeroListItemComponent,
+      TeamComponent,
+      HeroCardComponent,
+      EmptyCardComponent ]
     })
     .compileComponents();
   }));
