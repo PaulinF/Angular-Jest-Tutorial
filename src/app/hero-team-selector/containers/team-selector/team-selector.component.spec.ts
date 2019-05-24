@@ -29,12 +29,7 @@ describe('TeamSelectorComponent', () => {
     spyOn(window, 'alert');
     fixture.detectChanges();
   });
-  
-  beforeEach(() => {
-    fixture = TestBed.createComponent(TeamSelectorComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+ 
 
   it('should create', () => {
     expect(component).toBeTruthy();
