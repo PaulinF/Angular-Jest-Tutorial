@@ -16,6 +16,7 @@ describe('TeamComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TeamComponent);
+    spyOn(component.removeMember, 'emit');
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
