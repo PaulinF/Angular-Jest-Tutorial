@@ -18,7 +18,7 @@ describe('HeroListComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HeroListComponent);
     component = fixture.componentInstance;
-    spyOn(component.removeMember, 'emit');
+    spyOn(component.selectItem, 'emit');
     component.title = 'hero';
     component.list = [
      {
