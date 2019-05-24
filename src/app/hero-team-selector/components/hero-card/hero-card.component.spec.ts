@@ -16,6 +16,7 @@ describe('HeroCardComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HeroCardComponent);
     component = fixture.componentInstance;
+    spyOn(component.removeMember, 'emit');
     component.member = {
     id: 3,
     name: 'IronMan',
@@ -30,5 +31,10 @@ describe('HeroCardComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  
+  it('should emit removeHero event when call remove function', () => {
+    component.remove();
+    expect(component.removeMember.emit).toHaveBeenCalledWith(component.member);
   });
 });
