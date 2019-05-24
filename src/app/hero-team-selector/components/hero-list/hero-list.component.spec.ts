@@ -18,6 +18,7 @@ describe('HeroListComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HeroListComponent);
     component = fixture.componentInstance;
+    spyOn(component.removeMember, 'emit');
     component.title = 'hero';
     component.list = [
      {
@@ -46,4 +47,13 @@ describe('HeroListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
+  it('should emit selectItem event when onSelect function is call', () => {
+    component.onSelect(component.list[0]);
+    expect(component.selectItem.emit).toHaveBeenCalledWith({
+      type: component.title,
+      member: component.list[0]
+    });
+  });
+  
 });
