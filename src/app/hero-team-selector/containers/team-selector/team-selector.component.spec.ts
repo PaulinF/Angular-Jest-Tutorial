@@ -1,15 +1,73 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HeroListComponent } from 'src/app/hero-team-selector/components/hero-list/hero-list.component';
-import { HeroListItemComponent } from 'src/app/hero-team-selector/components/hero-list-item/hero-list-item.component';
-import { TeamComponent } from 'src/app/hero-team-selector/components/team/team.component';
-import { HeroCardComponent } from 'src/app/hero-team-selector/components/hero-card/hero-card.component';
-import { EmptyCardComponent } from 'src/app/hero-team-selector/components/empty-card/empty-card.component';
+import {
+  HeroListComponent,
+  HeroListItemComponent,
+  TeamComponent,
+  HeroCardComponent,
+  EmptyCardComponent
+} from '../../components';
 import { TeamSelectorComponent } from './team-selector.component';
 
 describe('TeamSelectorComponent', () => {
   let component: TeamSelectorComponent;
   let fixture: ComponentFixture<TeamSelectorComponent>;
+  
+const hero = {
+    type: 'Heroes',
+    member: {
+      id: 2,
+      name: 'Hulk',
+      real_name: 'Robert Bruce Banner',
+      thumb:
+        'https://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0/standard_xlarge.jpg',
+      image: 'https://i.annihil.us/u/prod/marvel/i/mg/e/e0/537bafa34baa9.jpg',
+      description:
+        'Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk gets.'
+    }
+  };
 
+  const wicked = {
+    type: 'Wicked',
+    member: {
+      id: 2,
+      name: 'Hulk',
+      real_name: 'Robert Bruce Banner',
+      thumb:
+        'https://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0/standard_xlarge.jpg',
+      image: 'https://i.annihil.us/u/prod/marvel/i/mg/e/e0/537bafa34baa9.jpg',
+      description:
+        'Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk gets.'
+    }
+  };
+
+  const heroToRemove = {
+    type: 'Team of Heros',
+    member: {
+      id: 2,
+      name: 'Hulk',
+      real_name: 'Robert Bruce Banner',
+      thumb:
+        'https://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0/standard_xlarge.jpg',
+      image: 'https://i.annihil.us/u/prod/marvel/i/mg/e/e0/537bafa34baa9.jpg',
+      description:
+        'Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk gets.'
+    }
+  };
+
+  const wickedToRemove = {
+    type: 'Team of Wicked',
+    member: {
+      id: 2,
+      name: 'Hulk',
+      real_name: 'Robert Bruce Banner',
+      thumb:
+        'https://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0/standard_xlarge.jpg',
+      image: 'https://i.annihil.us/u/prod/marvel/i/mg/e/e0/537bafa34baa9.jpg',
+      description:
+        'Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk gets.'
+    }
+  };
+  
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ 
