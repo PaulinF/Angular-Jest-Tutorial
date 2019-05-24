@@ -31,4 +31,9 @@ describe('HeroListItemComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
+  it('should emit SelectItem event when method select was called', () => {
+    component.select();
+    expect(component.selectItem.emit).toHaveBeenCalledWith(component.item);
+  });
 });
